@@ -14,15 +14,15 @@ A responsive React + TypeScript app where a customer enters their income, expens
 
 ## Tech stack
 
-| Concern    | Choice                                         |
-| ---------- | ---------------------------------------------- |
-| UI         | React 19, TypeScript (strict), Vite            |
-| Forms      | React Hook Form + Zod                          |
-| Server state | TanStack Query                               |
-| Mock API   | Mock Service Worker (MSW)                      |
-| Tests      | Vitest, React Testing Library, user-event, MSW |
-| Quality    | ESLint, Prettier, GitHub Actions CI            |
-| Delivery   | Multi-stage Dockerfile (Node build, unprivileged nginx runtime) |
+| Concern      | Choice                                                          |
+| ------------ | --------------------------------------------------------------- |
+| UI           | React 19, TypeScript (strict), Vite                             |
+| Forms        | React Hook Form + Zod                                           |
+| Server state | TanStack Query                                                  |
+| Mock API     | Mock Service Worker (MSW)                                       |
+| Tests        | Vitest, React Testing Library, user-event, MSW                  |
+| Quality      | ESLint, Prettier, GitHub Actions CI                             |
+| Delivery     | Multi-stage Dockerfile (Node build, unprivileged nginx runtime) |
 
 ## Requirements
 
@@ -67,12 +67,12 @@ docker build --build-arg VITE_USE_MOCKS=false --build-arg VITE_API_BASE_URL=http
 
 The app implements the following endpoints (mocked with MSW in `src/mocks`):
 
-| Method | Path                           | Purpose                                      |
-| ------ | ------------------------------ | -------------------------------------------- |
-| POST   | `/api/loans/eligibility`       | Eligibility, recommended loan, affordability |
-| GET    | `/api/loans/products`          | Loan products and their purposes             |
-| POST   | `/api/loans/calculate-rate`    | Rate, payment and full amortization schedule |
-| GET    | `/api/loans/validation-rules`  | Form validation rules and messages           |
+| Method | Path                          | Purpose                                      |
+| ------ | ----------------------------- | -------------------------------------------- |
+| POST   | `/api/loans/eligibility`      | Eligibility, recommended loan, affordability |
+| GET    | `/api/loans/products`         | Loan products and their purposes             |
+| POST   | `/api/loans/calculate-rate`   | Rate, payment and full amortization schedule |
+| GET    | `/api/loans/validation-rules` | Form validation rules and messages           |
 
 ## Project structure
 
